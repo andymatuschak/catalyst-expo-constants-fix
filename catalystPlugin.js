@@ -1,12 +1,7 @@
 const {
   withEntitlementsPlist,
   withXcodeProject,
-  IOSConfig,
 } = require("expo/config-plugins");
-
-// We modify Expo's Continuous Native Generation for a few custom native features:
-// * a custom URL scheme for attachments which should be resolved through the on-disk database
-// * enabling macOS Catalyst builds
 
 module.exports = function withOrbitExpoConfigPlugin(config, {developmentTeamID}) {
   config = withXcodeProject(config, async (config) => {
